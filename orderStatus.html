@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commande - Orinoco</title>
+  <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+  <link href="./styles/compiled.css" rel="stylesheet">
+  <script  defer src="./js/config.js" ></script>
+  <script defer src="./js/pages/orderStatus.js" ></script>
+</head>
+<body class="accueil-bg-magic">
+  <div class="container px-4 py-8 mx-auto">
+    <!-- HEADER -->
+    <header class="flex items-center justify-between w-full px-6 py-2 rounded-lg bg-oniPink">
+      <a href="/index.html"><img class="h-20 bg-oniPink" src="./images/logo.png" alt="Orinoco"></a>
+      <nav class="flex">
+        <ul class="font-semibold list-none">
+          <li>
+            <a class="px-4 py-4" href="./cart.html">Panier</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- HEADER -->
+
+    <main class="flex flex-col justify-center w-full py-16 my-4 rounded-lg bg-oniPink">
+      <p class="mb-4 text-4xl font-bold text-center">Félicitation, votre commande à bien été prise en compte !</p>
+      <p class="mb-4 text-xl text-center">Identifiant de votre commande : <span class="font-bold" id="commandId"></span></p>
+      <a class="inline-block px-4 py-2 mx-auto font-semibold text-center text-white uppercase bg-gradient-to-r
+      from-purple-600
+      to-purple-500 rounded" href="/">Retourner à l'accueil</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panier - Orinoco</title>
+    <meta name="title" content="Panier - Orinoco" />
+    <meta
+      name="description"
+      content="Orinoco est un site e-commerce à thème. C'est aussi le projet 5 du parcours développeur web chez OpenClassrooms."
+    />
+
+    <meta property="og:type" content="site web e-commerce" />
+    <meta
+      property="og:url"
+      content="https://oliive33.github.io/Projet-Oricono/cart.html"
+    />
+    <meta property="og:title" content="Panier - Orinoco" />
+    <meta
+      property="og:description"
+      content="Orinoco est un site e-commerce à thème. C'est aussi le 5ième projet du parcours développeur web chez OpenClassrooms."
+    />
+    <meta property="og:image" content="/images/logo.png" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link
+      rel="canonical"
+      href="https://oliive33.github.io/Projet-Oricono/cart.html"
+    />
+
+    <link href="./styles/compiled.css" rel="stylesheet" />
+    <script defer src="./js/config.js"></script>
+    <script defer src="./js/cart.utils.js"></script>
+    <script defer src="./js/pages/cart.js"></script>
+  </head>
+  <body class="accueil-bg-magic">
+    <div class="container px-4 py-8 mx-auto">
+      <!-- HEADER -->
+      <header
+        class="flex items-center justify-between w-full px-6 py-2 rounded-lg bg-oniPink"
+      >
+        <a href="/"
+          ><img class="h-20 bg-oniPink" src="./images/logo.png" alt="Orinoco"
+        /></a>
+        <nav class="flex">
+          <ul class="font-semibold list-none">
+            <li>
+              <a class="px-4 py-4" href="">Panier</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- HEADER -->
+
+      <div class="">
+        <!-- ORDER SUMMARY -->
+        <section class="p-4 mt-4 rounded-md bg-oniPink">
+          <h2 class="mb-2 text-lg font-bold">Votre carte</h2>
+
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-white border">
+                <th class="py-2">Produit</th>
+                <th>Quantité</th>
+                <th>Prix</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+
+            <tbody id="productsList">
+              <template id="productTemplate">
+                <tr class="bg-white border rounded">
+                  <td id="productName" class="p-0 py-2 text-center"></td>
+                  <td class="p-0 text-center">
+                    <form class="flex">
+                      <select
+                        id="productQuantity"
+                        class="z-10 block w-full py-1 pl-3 pr-10 text-base text-center border border-indigo-200 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        name="quantity"
+                        id="quantity"
+                      >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </form>
+                  </td>
+                  <td id="productPrice" class="p-0 text-center">x€</td>
+                  <td id="productTotalPrice" class="p-0 text-center">x€</td>
+                </tr>
+              </template>
+              <tr class="bg-gray-100">
+                <td colspan="3" class="py-2 text-center">Total</td>
+                <td class="text-center" id="totalPrice">x€</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <!-- ORDER SUMMARY -->
+
+        <!-- PURCHASE FORM -->
+        <section class="p-4 mt-4 rounded-md bg-oniPink">
+          <h2 class="mb-2 text-lg font-bold">Passer votre commande</h2>
+          <div class="grid grid-cols-4 gap-4">
+            <div class="flex flex-col">
+              <label for="firstname" class="label">Prénom</label>
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                class="input"
+                required
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="lastname" class="label">Nom</label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                class="input"
+                required
+              />
+            </div>
+            <div class="flex flex-col col-span-2">
+              <label for="email" class="label">Adresse e-mail</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="input"
+                required
+              />
+            </div>
+            <div class="flex flex-col col-span-2">
+              <label for="adress" class="label">Adresse</label>
+              <input
+                type="text"
+                name="adress"
+                id="adress"
+                class="input"
+                required
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="zipcode" class="label">Code postal</label>
+              <input
+                type="text"
+                name="zipcode"
+                id="zipcode"
+                class="input"
+                required
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="city" class="label">Ville</label>
+              <input type="text" name="city" id="city" class="input" required />
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <a
+              id="confirmPurchase"
+              class="inline-flex justify-center px-4 py-2 mt-6 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-purple-500 border border-transparent rounded-md shadow-sm hover:bg-gradient-to-r from-purple-700 to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              href="#"
+            >
+              Procéder au paiement
+            </a>
+          </div>
+        </section>
+        <!-- PURCHASE FORM -->
+      </div>
+    </div>
+  </body>
+</html>

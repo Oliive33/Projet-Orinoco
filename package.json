@@ -1,0 +1,29 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss styles/main.css -o styles/compiled.css",
+    "production": "cross-env NODE_ENV=production postcss styles/main.css -o styles/compiled.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
+    "autoprefixer": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1"
+  }
+}

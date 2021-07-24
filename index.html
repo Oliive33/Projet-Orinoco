@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accueil - Orinoco</title>
+    <meta property="og:title" content="Orinoco" />
+    <meta property="og:type" content="site web e-commerce" />
+    <meta
+      property="og:url"
+      content="https://oliive33.github.io/Projet-Oricono/index.html"
+    />
+    <meta property="og:image" content="/images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://oliive33.github.io/Projet-Oricono/" />
+    <meta
+      name="description"
+      content="Orinoco est un site web de commerce en ligne, ou vous pouvez acheter vos cameras préférée et les personnaliser !"
+    />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+
+    <link href="./styles/compiled.css" rel="stylesheet" />
+    <script defer src="./js/config.js"></script>
+    <script defer src="./js/pages/index.js"></script>
+  </head>
+  <body class="accueil-bg-magic">
+    <div class="container mx-auto px-4 py-8">
+      <!-- HEADER -->
+      <header
+        class="flex justify-between items-center rounded-md w-full bg-oniPink py-2 px-6"
+      >
+        <a href="/"
+          ><img class="h-20 bg-oniPink" src="./images/logo.png" alt="Orinoco"
+        /></a>
+        <nav class="flex">
+          <ul class="list-none font-semibold">
+            <li>
+              <a class="px-4 py-4" href="./cart.html"
+                ><img
+                  class="h-10"
+                  src="./images/shopping-cart.svg"
+                  alt="panier"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- HEADER -->
+
+      <!-- PRODUCT CONTAINER & LOADING BOXES -->
+      <ul
+        id="productsList"
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4"
+      >
+        <div class="bg-oniPink animate-pulse h-80"></div>
+        <div class="bg-oniPink animate-pulse h-80"></div>
+        <div class="bg-oniPink animate-pulse h-80"></div>
+        <div class="bg-oniPink animate-pulse h-80"></div>
+        <div class="bg-oniPink animate-pulse h-80"></div>
+        <div class="bg-oniPink animate-pulse h-80"></div>
+      </ul>
+      <!-- PRODUCT CONTAINER & LOADING BOXES -->
+    </div>
+
+    <!-- PRODUCT TEMPLATE -->
+    <template id="product">
+      <li
+        class="list-none bg-oniPink rounded-md p-4 shadow-sm transition duration-200 transform hover:scale-102"
+      >
+        <a id="productLink" href="./products.html">
+          <figure>
+            <img
+              id="productImage"
+              class="rounded h-64 w-full object-cover"
+              src=""
+              alt=""
+            />
+            <figcaption class="pt-4">
+              <div class="flex justify-between mb-2">
+                <h2 id="productName" class="font-bold"></h2>
+                <div class="flex items-start mr-4">
+                  <img class="h-5" src="./images/star.svg" alt="" />
+                  <img class="h-5" src="./images/star.svg" alt="" />
+                  <img class="h-5" src="./images/star.svg" alt="" />
+                  <img class="h-5" src="./images/star.svg" alt="" />
+                  <img class="h-5" src="./images/star.svg" alt="" />
+                </div>
+                <span
+                  id="productPrice"
+                  class="text-sm font-bold bg-white px-2 py-1 rounded"
+                ></span>
+              </div>
+              <p
+                id="productDescription"
+                class="text-black text-opacity-80 text-sm text-justify"
+              ></p>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+    </template>
+    <!-- PRODUCT TEMPLATE -->
+
+    <!-- Footer -->
+
+    <footer class="bg-oniPink py-5">
+      <img
+        class="h-20 mx-auto mb-5"
+        src="./images/logo.png"
+        alt="logo orinoco"
+      />
+      <div
+        class="mb-5 flex space-x-6 justify-center opacity-60 transition-all hover: opacity-100 duration-1000 ease-out"
+      >
+        <a href="#">
+          <img src="./images/fb.svg" alt="icone fb" class="h-8 w-8" />
+        </a>
+        <a
+          href="#
+        "
+        >
+          <img src="./images/instagram.svg" alt="icone insta" class="h-8 w-8" />
+        </a>
+        <a
+          href="#
+        "
+        >
+          <img src="./images/twitter.svg" alt="icone twitter" class="h-8 w-8" />
+        </a>
+      </div>
+      <hr class="w-36 mx-auto mb-5" />
+      <p class="text-center mt-8 text-base text-gray-400 md:mt-0">
+        &copy; 2021 ORINOCO, TOUT DROITS RÉSERVÉS
+      </p>
+    </footer>
+  </body>
+</html>
